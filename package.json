@@ -1,7 +1,7 @@
 {
   "name": "tourmap",
   "version": "0.1.0",
-  "private": true,
+
   "dependencies": {
     "google-map-react": "^0.27.0",
     "react": "^16.2.0",
