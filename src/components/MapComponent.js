@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import GoogleMapReact from 'google-map-react'
 
-import MyGreatPlace from './MyGreatPlace'
+import Place from './Place'
 import { indiaLatLong } from '../util/constants'
+
+// TODO: center the Place component
 
 class MapComponent extends Component {
   static defaultProps = {
@@ -17,7 +19,7 @@ class MapComponent extends Component {
         defaultZoom={this.props.zoom}
         style={{ height: 100 + 'vh' }}
       >
-        <MyGreatPlace lat={17.38} lng={78.48} text={'Hyderabad'} />
+        <Place lat={17.38} lng={78.48} />
       </GoogleMapReact>
     )
   }
