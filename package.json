@@ -1,7 +1,6 @@
 {
   "name": "tourmap",
   "version": "0.1.0",
-
   "dependencies": {
     "google-map-react": "^0.27.0",
     "react": "^16.2.0",
@@ -13,6 +12,23 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format":
+      "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --trailing-comma es5 --no-semi --single-quote --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^4.8.0",
+    "eslint-config-google": "^0.9.1",
+    "eslint-plugin-react": "^7.4.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.0",
+    "prettier": "1.10.2"
   }
 }
